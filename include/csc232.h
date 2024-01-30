@@ -62,7 +62,18 @@ namespace csc232
 {
     // Add any user-defined functions prescribed in your assignment below
     // TODO: 1.1 Declare the Shape interface below
+class shape
+{ public: 
+virtual double area()=0;
+virtual doble perimeter()=0;
+};
 
+class square{
+public:
+
+private:
+
+};
     // TODO: 2.1 Provide an inline definition of the Square class below
 
     // TODO: 3.1 Provide an inline definition of the Circle class below
