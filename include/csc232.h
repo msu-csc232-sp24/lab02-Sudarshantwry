@@ -70,25 +70,25 @@ virtual double perimeter() const =0;
 
 
     // TODO: 2.1 Provide an inline definition of the Square class below
-class square{
+//class square{
 
-public:
-virtual double side() const=0;
-virtual double area() const=0;
+//public:
+//virtual double side() const=0;
+//virtual double area() const=0;
 
-private:
-area=side*side
+//private:
+//area=side*side
 
  };
 
     // TODO: 3.1 Provide an inline definition of the Circle class below
-    class Circle{
-        public:
-        virtual double radius() const=0;
-        virtual double area() const=0;
+    //class Circle{
+        //public:
+       // virtual double radius() const=0;
+        //virtual double area() const=0;
 
-        private:
-        area= 3.14* radius * radius
+        //private:
+        //area= 3.14* radius * radius
     }
 
     // DO NOT Modify anything below this line
