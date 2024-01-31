@@ -58,40 +58,41 @@ using std::setw;
 /**
  * @brief Common namespace for CSC232 identifiers.
  */
-namespace csc232
-{
-    // Add any user-defined functions prescribed in your assignment below
+namespace csc232 {
+
     // TODO: 1.1 Declare the Shape interface below
-class Shape
-{ public: 
-virtual double area() const=0;
-virtual double perimeter() const =0;
+   class Shape{
+    public:
+    virtual double area()const=0;
+    virtual double perimeter()const=0;
 };
 
-
-    //TODO: 2.1 Provide an inline definition of the Square class below
-class square{
-
-public:
-virtual double side() const=0;
-virtual double area() const=0;
-
-private:
-area=side*side
-
- };
-
-    TODO: 3.1 Provide an inline definition of the Circle class below
-    class Circle{
-        public:
-       virtual double radius() const=0;
-        virtual double area() const=0;
-
-        private:
-        area= 3.14* radius * radius
+    // TODO: 2.1 Provide an inline definition of the Square class below
+    class Square : public Shape {
+    public:
+    Square() : side{1.0} {}
+    double area() const override {
+        return side*side;
     }
+    double perimeter() const override {
+        return side*4.0;
+    }
+    private:
+    double side;
+};
+    // TODO: 3.1 Provide an inline definition of the Circle class below 
+    class Circle : public Shape {
+    public:
+    Circle() : radius{1.0} {}
+    double area() const override {
+        return M_PI*(radius*radius);
+    }
+    double perimeter() const override {
+        return 2*M_PI*radius;
+    }
+    private:
+    double radius;
 
-    DO NOT Modify anything below this line
-} namespace csc232
-
+}; //namespace csc232
+}
 #endif // CSC232_COMMON_H_
