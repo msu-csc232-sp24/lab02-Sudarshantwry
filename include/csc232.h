@@ -18,7 +18,7 @@
 #define TRUE 1
 #define EXECUTE_BLOCK FALSE
 
-#define FINISHED_PART_1 FALSE
+#define FINISHED_PART_1 TRUE
 #define FINISHED_PART_2 FALSE
 #define FINISHED_PART_3 FALSE
 
@@ -62,21 +62,34 @@ namespace csc232
 {
     // Add any user-defined functions prescribed in your assignment below
     // TODO: 1.1 Declare the Shape interface below
-class shape
+class Shape
 { public: 
-virtual double area()=0;
-virtual doble perimeter()=0;
+virtual double area() const=0;
+virtual double perimeter() const =0;
 };
 
+
+    // TODO: 2.1 Provide an inline definition of the Square class below
 class square{
+
 public:
+virtual double side() const=0;
+virtual double area() const=0;
 
 private:
+area=side*side
 
-};
-    // TODO: 2.1 Provide an inline definition of the Square class below
+ };
 
     // TODO: 3.1 Provide an inline definition of the Circle class below
+    class Circle{
+        public:
+        virtual double radius() const=0;
+        virtual double area() const=0;
+
+        private:
+        area= 3.14* radius * radius
+    }
 
     // DO NOT Modify anything below this line
 } // namespace csc232
